@@ -6,6 +6,7 @@
 # folders
 node_modules/*
 coverage/*
+temp/*
 
 # Editor directories and files
 .vscode
