@@ -4,9 +4,11 @@
 .DS_Store
 
 # folders
+node_modules
 node_modules/*
 coverage/*
 temp/*
+demo/*
 
 # Editor directories and files
 .vscode
