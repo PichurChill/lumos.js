@@ -1,6 +1,6 @@
 // Karma configuration
 // Generated on Fri Jan 04 2019 09:45:36 GMT+0800 (中国标准时间)
-
+const path = require('path');
 module.exports = function(config) {
   config.set({
 
@@ -10,11 +10,13 @@ module.exports = function(config) {
 
     // frameworks to use
     // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
-    frameworks: ['mocha'],
+    frameworks: ['mocha', 'chai'],
 
-
+    // plugins: ['karma-coverage-istanbul-reporter'],
     // list of files / patterns to load in the browser
     files: [
+      'dist/*.min.js',
+      'test/**/*.test.js'
     ],
 
 
@@ -26,14 +28,36 @@ module.exports = function(config) {
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
+      'dist/*.min.js': ['coverage']
     },
 
 
     // test results reporter to use
     // possible values: 'dots', 'progress'
     // available reporters: https://npmjs.org/browse/keyword/karma-reporter
-    reporters: ['progress'],
+    reporters: ['mocha', 'coverage'],
+    
+    mochaReporter: {
+      colors: {
+        success: 'blue',
+        info: 'bgGreen',
+        warning: 'cyan',
+        error: 'bgRed'
+      },
+      symbols: {
+        success: '+',
+        info: '#',
+        warning: '!',
+        error: 'x'
+      }
+    },
 
+    coverageReporter: {
+      type: 'lcov',
+      dir: 'coverage/',
+      subdir: '.'
+      // Would output the results into: .'/coverage/'
+    },
 
     // web server port
     port: 9876,
