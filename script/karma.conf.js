@@ -53,8 +53,14 @@ module.exports = function(config) {
     },
 
     coverageReporter: {
-      type: 'lcov',
+      // specify a common output directory
       dir: 'coverage/',
+      reporters: [
+        // reporters not supporting the `file` property
+        { type: 'html', subdir: 'report-html' },
+        { type: 'lcov', subdir: 'report-lcov' },
+        { type: 'text-summary', subdir: '.', file: 'text-summary.txt' },
+      ],
       subdir: '.'
       // Would output the results into: .'/coverage/'
     },

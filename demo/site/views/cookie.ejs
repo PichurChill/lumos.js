@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+    <%-include("../templates/pageHead",{title: title})%>
+    <body>
+        <h1>
+            <%= title %>
+        </h1>
+        <p>Welcome to
+            <% console.log(lumos) %>
+            <%= lumos.a %>
+        </p>
+        <%-include("../templates/pageFoot")%>
+    </body>
+</html>

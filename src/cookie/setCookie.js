@@ -6,7 +6,7 @@
  * @param {Number} days 
  */
 function setCookie(name, value, days) {
-    var date = new Date();
+    let date = new Date();
     date.setDate(date.getDate() + days);
     document.cookie = name + '=' + value + ';expires=' + date;
 }

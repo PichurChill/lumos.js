@@ -1,0 +1,25 @@
+<!-- <script src="../../../dist/lumos.min.js"></script> -->
+  <script>
+    function cloneObj(obj) {
+        let str, newobj = obj.constructor === Array ? [] : {}
+        if (typeof obj !== 'object') {
+          return
+        } else if (obj && typeof obj === "object") {
+          for (let key in obj) {
+            if (obj.hasOwnProperty(key)) {
+              //判断ojb子元素是否为对象，如果是，递归复制
+              if (obj[key] && typeof obj[key] === "object") {
+                newobj[key] = cloneObj(obj[key]);
+              } else {
+                //如果不是，简单复制
+                newobj[key] = obj[key];
+              }
+            }
+          }
+        }
+        return newobj
+      }
+      var test = {}
+    <% test = 123 %>
+    var lumos = <%- lumos %>
+  </script>
