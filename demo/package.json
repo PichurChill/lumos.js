@@ -1,5 +1,5 @@
 {
-  "name": "site",
+  "name": "demo",
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
@@ -9,10 +9,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "ejs": "^2.6.1",
     "express": "^4.16.4"
   },
   "devDependencies": {
-    "nodemon": "^1.18.9"
+    "ejs": "^2.6.1"
   }
 }
