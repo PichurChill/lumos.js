@@ -4,9 +4,12 @@
   "description": "Front-End utils",
   "main": "dist/lumos.min.js",
   "scripts": {
+    "dev": "concurrently --kill-others \"npm run build-pack-watch\" \"npm run demo-server\" \"npm run test\"",
     "build": "node script/build.js",
     "build-copy": "node script/build-copy.js",
     "build-pack": "node script/build-pack",
+    "build-pack-watch": "nodemon --watch src ./script/build-pack.js",
+    "demo-server": "cd demo && npm i && nodemon ./app.js",
     "test": "npm run build-pack && karma start script/karma.conf.js"
   },
   "repository": {
@@ -24,6 +27,7 @@
     "babel-loader": "^7.1.5",
     "babel-preset-env": "^1.7.0",
     "chai": "^4.2.0",
+    "concurrently": "^4.1.0",
     "copy": "^0.3.2",
     "karma": "^3.1.4",
     "karma-chai": "^0.1.0",

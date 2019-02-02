@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <%-include("./templates/pageHead",{title: title})%>
+    <body>
+        <h1>
+            <%= title %>
+        </h1>
+
+        <h2>isEmpty</h2>
+        <input id="data-isempty" type="text">
+        <button onclick="testIsEmpty(document.querySelector('#data-isempty').value)">validate</button>
+        <br>
+        <button onclick="testIsEmpty(null)">validate null</button>
+        <button onclick="testIsEmpty(undefined)">validate undefined</button>
+
+        <%-include("./templates/pageFoot")%>
+        <script>
+            function testIsEmpty(val) {
+                if (lumos.isEmpty(val)) {
+                    alert("it's 'empty'")
+                } else {
+                    alert("it's not 'empty'")
+                }
+            }
+        </script>
+    </body>
+</html>
