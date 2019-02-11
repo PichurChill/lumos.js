@@ -4,7 +4,7 @@
   "description": "Front-End utils",
   "main": "dist/lumos.min.js",
   "scripts": {
-    "dev": "concurrently --kill-others \"npm run build-pack-watch\" \"npm run demo-server\" \"npm run test\"",
+    "dev": "concurrently --kill-others \"npm run build-pack-watch\" \"npm run demo-server\" \"npm run test --testMode=watch\"",
     "build": "node script/build.js",
     "build-copy": "node script/build-copy.js",
     "build-pack": "node script/build-pack",

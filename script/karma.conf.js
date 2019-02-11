@@ -1,6 +1,8 @@
 // Karma configuration
 // Generated on Fri Jan 04 2019 09:45:36 GMT+0800 (中国标准时间)
 const path = require('path');
+const testMode = process.env.npm_config_testMode
+
 module.exports = function(config) {
   config.set({
 
@@ -95,7 +97,7 @@ module.exports = function(config) {
 
     // Continuous Integration mode
     // if true, Karma captures browsers, runs the tests and exits
-    singleRun: false,
+    singleRun: testMode !== 'watch',
 
     // Concurrency level
     // how many browser should be started simultaneous
