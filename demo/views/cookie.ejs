@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <%-include("./templates/pageHead",{title: title})%>
+    <body>
+        <h1>
+            <%= title %>
+        </h1>
+        <button onclick="testSetCookie()">setCookie</button>
+        <button onclick="testGetCookie()">getCookie</button>
+        <button onclick="testRemoveCookie()">removeCookie</button>
+        <%-include("./templates/pageFoot")%>
+        <script>
+            function testSetCookie() {
+                lumos.setCookie('cookieName', 'cookieValue')
+                alert('set success')
+            }
+            function testGetCookie() {
+                alert(lumos.getCookie('cookieName'))
+            }
+            function remtestRtestReCookie() {
+                lumos.removeCookie('cookieName')
+                alert('remove success')
+            }
+        </script>
+    </body>
+</html>

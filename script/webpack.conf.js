@@ -9,9 +9,9 @@ const config = {
     mode: 'production',
     entry: path.resolve(rootPath, 'src', 'index.js'),
     output: {
-        filename: `${pkg.name}.min.js`,
+        filename: 'lumos.min.js',
         path: path.resolve(rootPath, 'dist'),
-        library: `${pkg.name}`,
+        library: 'lumos', // pkg.name
         libraryTarget: "umd"
     },
     module: {
