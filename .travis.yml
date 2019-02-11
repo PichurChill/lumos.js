@@ -1,6 +1,9 @@
 language: node_js
 node_js:
   - '8.11'
+branchs:
+  only:
+  - npm  #指定只有检测到 npm 分支有变动时才执行任务
 # before_script:
 #   - export DISPLAY=:99.0
 #   - sh -e /etc/init.d/xvfb start
