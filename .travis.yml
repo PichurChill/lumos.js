@@ -1,6 +1,8 @@
 language: node_js
 node_js:
   - '8.11'
+before_install:
+  - sudo apt-get install google-chrome-stable
 branchs:
   only:
   - npm  #指定只有检测到 npm 分支有变动时才执行任务
