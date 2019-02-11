@@ -3,9 +3,20 @@ node_js:
   - '8.11'
 before_install:
   - sudo apt-get install google-chrome-stable
+install:
+  - npm install
+script:
+  - npm run test
 branchs:
   only:
   - npm  #指定只有检测到 npm 分支有变动时才执行任务
-# before_script:
-#   - export DISPLAY=:99.0
-#   - sh -e /etc/init.d/xvfb start
+before_deploy:
+  - npm run build
+  - rm -rf ./src ./test ./coverage ./script ./.babelrc ./demo
+deploy:
+  provider: npm
+  email: "$NPM_EMAIL"
+  api_key: "$NPM_TOKEN"
+  skip_cleanup: true
+  on:
+    branch: npm
