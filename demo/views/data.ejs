@@ -10,8 +10,18 @@
         <input id="data-isempty" type="text">
         <button onclick="testIsEmpty(document.querySelector('#data-isempty').value)">validate</button>
         <br>
+        <br>
+        <br>
+        testIsEmpty(null)
         <button onclick="testIsEmpty(null)">validate null</button>
-        <button onclick="testIsEmpty(undefined)">validate undefined</button>
+        <br>
+
+        testIsEmpty(undefined)
+        <button onclick="testIsEmpty(undefined)">validate undefined </button>
+        <br>
+
+        alert(lumos.isEmpty('', 'defaultValue'))
+        <button onclick="alert(lumos.isEmpty('', 'defaultValue'))">validate undefined</button>
 
         <%-include("./templates/pageFoot")%>
         <script>

@@ -19,4 +19,16 @@ app.get('/data', (req, res) => {
     res.render('data', { title: 'data' });
 })
 
+app.get('/localStorage', (req, res) => {
+    res.render('localStorage', { title: 'localStorage' });
+})
+
+app.get('/device', (req, res) => {
+    res.render('device', { title: 'device' });
+})
+
+app.get('/object', (req, res) => {
+    res.render('object', { title: 'object' });
+})
+
 app.listen(3333, () => console.log('Example app listening on port 3333!'))

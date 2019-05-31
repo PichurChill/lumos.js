@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <%-include("./templates/pageHead",{title: title})%>
+    <body>
+        <h1>
+            <%= title %>
+        </h1>
+     
+        <%-include("./templates/pageFoot")%>
+        see the console
+        <button onclick="deepClone()">getBrowser</button>
+        <script>
+            var a = {key: 123 };
+            var b;
+            function deepClone(params) {
+                b = lumos.deepClone(a)
+                b.key = 456
+                console.log(a);
+                console.log(b);
+            }
+        </script>
+    </body>
+</html>
