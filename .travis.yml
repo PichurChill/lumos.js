@@ -7,12 +7,17 @@ install:
   - npm install
 script:
   - npm run test
-branchs:
+
+# Block branchs
+branches:
   except:
-    - master
-    - dev
+  - master
+  - dev
+# safelist branchs
+branchs:
   only:
-    - npm  #指定只有检测到 npm 分支有变动时才执行任务
+  - npm  #指定只有检测到 npm 分支有变动时才执行任务
+
 before_deploy:
   - npm run build
   - rm -rf ./src ./test ./coverage ./script ./.babelrc ./demo
