@@ -9,7 +9,7 @@ script:
   - npm run test
 branchs:
   except:
-  - master #一定要排除才不会执行任务
+  - master
   only:
   - npm  #指定只有检测到 npm 分支有变动时才执行任务
 before_deploy:
