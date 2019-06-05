@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<%-include("./templates/pageHead",{title: title})%>
+
+<body>
+    <h1>
+        <%= title %>
+    </h1>
+
+    13211111123->132******23
+    <br>
+    <input type="text" id="test1">
+    <p id="test1-p"></p>
+    <button onclick="test1()">strReplace(str, 3, 6, '******')</button>
+    <%-include("./templates/pageFoot")%>
+    <script>
+
+        function test1(params) {
+            var str =document.querySelector('#test1').value
+            document.querySelector('#test1-p').innerHTML = lumos.strReplace(str, 3, 6, '*****')
+            
+        }
+    </script>
+</body>
+
+</html>

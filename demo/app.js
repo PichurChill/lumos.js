@@ -31,4 +31,16 @@ app.get('/object', (req, res) => {
     res.render('object', { title: 'object' });
 })
 
+app.get('/dom', (req, res) => {
+    res.render('dom', { title: 'dom' });
+})
+
+app.get('/string', (req, res) => {
+    res.render('string', { title: 'string' });
+})
+
+app.get('/url', (req, res) => {
+    res.render('url', { title: 'url' });
+})
+
 app.listen(3333, () => console.log('Example app listening on port 3333!'))

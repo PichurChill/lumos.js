@@ -6,11 +6,11 @@
             <%= title %>
         </h1>
      
-        <%-include("./templates/pageFoot")%>
         <button onclick="getBrowser()">getBrowser</button>
         <button onclick="getOS()">getOS</button>
         <p id="browser"></p>
         <p id="os"></p>
+        <%-include("./templates/pageFoot")%>
         <script>
             function getBrowser(params) {
                 var data = lumos.getBrowser()
