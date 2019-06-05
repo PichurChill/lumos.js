@@ -9,9 +9,10 @@ script:
   - npm run test
 branchs:
   except:
-  - master
+    - master
+    - dev
   only:
-  - npm  #指定只有检测到 npm 分支有变动时才执行任务
+    - npm  #指定只有检测到 npm 分支有变动时才执行任务
 before_deploy:
   - npm run build
   - rm -rf ./src ./test ./coverage ./script ./.babelrc ./demo
