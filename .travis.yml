@@ -11,12 +11,11 @@ script:
 # Block branchs
 branches:
   except:
-  - master
   - dev
 # safelist branchs
-branchs:
-  only:
-  - npm  #指定只有检测到 npm 分支有变动时才执行任务
+# branchs:
+#   only:
+#   - npm  #指定只有检测到 npm 分支有变动时才执行任务
 
 before_deploy:
   - npm run build
