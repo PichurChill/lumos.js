@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<%-include("./templates/pageHead",{title: title})%>
+
+<body>
+    <button onClick="test1()">get query string</button>
+    <button onClick="test2()">stringfyQueryString</button>
+    <%-include("./templates/pageFoot")%>
+    <script>
+        function test1(params) {
+            var a = lumos.parseQueryString()
+            console.log(a)
+            alert(JSON.stringify(a))
+        }
+        var obj = {
+            name: 'j',
+            goods: [{
+                type: 'house'
+            }, 'cat']
+        }
+        function test2() {
+            var a = lumos.stringfyQueryString(obj)
+            console.log(a)
+            alert(a)
+        }
+     
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<%-include("./templates/pageHead",{title: title})%>
+
+<body>
+    <h1>
+        <%= title %>
+    </h1>
+    <button onclick="testSet()">setLocalStorage</button>
+    <button onclick="testGet()">testGet</button>
+    <button onclick="testRemove()">removeLocalStorage</button>
+    <%-include("./templates/pageFoot")%>
+    <script>
+        function testSet() {
+            lumos.setLocalStorage('localName', 'localValue', 0.00009) // 8
+            alert('set success, after 8 seconds , it will remove')
+        }
+        function testGet() {
+            alert(lumos.getLocalStorage('localName'))
+        }
+        function testRemove() {
+            lumos.removeLocalStorage('localName')
+            alert('remove success')
+        }
+    </script>
+</body>
+
+</html>
