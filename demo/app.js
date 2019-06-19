@@ -43,4 +43,12 @@ app.get('/url', (req, res) => {
     res.render('url', { title: 'url' });
 })
 
+app.get('/date', (req, res) => {
+    res.render('date', { title: 'date' });
+})
+
+app.get('/function', (req, res) => {
+    res.render('function', { title: 'function' });
+})
+
 app.listen(3333, () => console.log('Example app listening on port 3333!'))

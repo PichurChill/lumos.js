@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <%-include("./templates/pageHead",{title: title})%>
+    <body>
+        <h1>
+            <%= title %>
+        </h1>
+        <p id="test"></p>
+        <%-include("./templates/pageFoot")%>
+        <h3>打开console查看</h3>
+
+        节流 throttle
+        <div id="dom1" style="height: 100px;width: 200px;border: 1px solid burlywood;overflow: auto">
+            <h2>=</h2>
+            <h2>=</h2>
+            <h2>=</h2>
+            <h2>=</h2>
+            <h2>=</h2>
+        </div>
+
+        防抖 debounce
+        <div id="dom2" style="height: 100px;width: 200px;border: 1px solid burlywood;overflow: auto">
+            <h2>=</h2>
+            <h2>=</h2>
+            <h2>=</h2>
+            <h2>=</h2>
+            <h2>=</h2>
+        </div>
+        <script>
+            var scrollHandler1 = function () {
+                console.log('throttle');
+            }
+            var fn = lumos.throttle(500, true, scrollHandler1)
+
+            document.querySelector("#dom1").addEventListener('scroll', fn) 
+
+
+            var scrollHandler2 = function () {
+                console.log('debounce');
+            }
+            var fn = lumos.debounce(500, scrollHandler2)
+
+            document.querySelector("#dom2").addEventListener('scroll', fn) 
+
+            
+        </script>
+    </body>
+</html>

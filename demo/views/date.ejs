@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <%-include("./templates/pageHead",{title: title})%>
+    <body>
+        <h1>
+            <%= title %>
+        </h1>
+        <input id="input" type="text" value="yyyy-MM-dd hh:mm:ss">
+        <button onclick="dateFormat()">dateFormat</button>
+
+        <p id="test"></p>
+        <%-include("./templates/pageFoot")%>
+        <script>
+            function dateFormat(params) {
+                document.querySelector("#test").innerHTML = lumos.dateFormat(new Date(), document.querySelector("#input").value)
+                
+            }
+        </script>
+    </body>
+</html>
