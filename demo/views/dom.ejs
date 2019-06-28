@@ -8,15 +8,16 @@
     </h1>
     window滚动
     <br>
-    <button onClick="windowSrollTo()">window滚动</button>
+    <button onclick="windowSrollTo()">window滚动</button>
     <div id="dom1" style="height: 100px;width: 200px;border: 1px solid burlywood;overflow: auto">
         <h2>=</h2>
         <h2>=</h2>
         <h2>=</h2>
         <h2>=</h2>
         <h2>=</h2>
+        <button onclick="backTop1()">backTop</button>
     </div>
-    <button onClick="dom1SrollTo()">dom滚动</button>
+    <button onclick="dom1SrollTo()">dom滚动</button>
 
     <h1>-</h1>
     <h1>-</h1>
@@ -58,14 +59,21 @@
     <h1>-</h1>
     <h1>-</h1>
     <h1>-</h1>
+    <button onclick="backTop2()">backTop</button>
     <%-include("./templates/pageFoot")%>
     <script>
         function windowSrollTo() {
-            lumos.scrollTo(window, 0, 80 , 1000)
+            lumos.scrollTo(window, 80 , 1000) // 三个参数
         }
 
         function dom1SrollTo(params) {
-            lumos.scrollTo(document.querySelector("#dom1"), 0, 80, 500)            
+            lumos.scrollTo(document.querySelector("#dom1"), 80, 500)      // 四个参数       
+        }
+        function backTop1(params) {
+            lumos.scrollTo(document.querySelector("#dom1"), 0, 200) // 四个参数
+        }
+        function backTop2(params) {
+            lumos.scrollTo(window, 0, 200) // 三个参数
         }
     </script>
 </body>
