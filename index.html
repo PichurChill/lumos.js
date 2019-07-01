@@ -5,63 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>lumos.js</title>
-    <style>
-        html {
-            height: 100%;
-            background: #333;
-        }
-        .light-spot {
-            width: 30px;
-            height: 30px;
-            margin: 50px auto;
-            background: #fffbe1;
-            border-radius: 50%;
-            box-shadow: 0px 0px 19px #ddd;
-            filter: blur(6px);        
-            outline: none;
-            animation: start-shine 4s forwards, shining 5s  4s infinite;
-
-        }
-        @keyframes start-shine {
-            0% {
-                transform: scale(0.1);
-            }
-
-            25% {
-                transform: scale(0.6);
-            }
-            65% {
-                transform: scale(0.4);
-            }
-    
-            100% {
-                transform: scale(1.6);   
-                box-shadow: 0px 0px 25px #ddd;
-            }
-        }
-        @keyframes shining {
-            0% {
-                transform: scale(1.6);            
-                box-shadow: 0px 0px 25px #ddd;             
-            }
-            50% {
-                transform: scale(1.75);         
-                filter: blur(7px);    
-                box-shadow: 0px 0px 27px #ddd;            
-            }
-
-            100% {
-                transform: scale(1.6);         
-                box-shadow: 0px 0px 25px #ddd;         
-            }
-        }
-    </style>
+    <link href="https://cdn.bootcss.com/animate.css/3.7.2/animate.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/index.css">
 </head>
 <body>
-    <div>
-        <div class="light-spot">
-            
+    <div id="halo" class="halo"></div>
+    <div id="top" class="top">
+        <p class="title animated fadeInUp">
+            Lumos
+        </p>
+        <div class="wand-conent">
+            <div id="light-spot" class="light-spot">
+        
+            </div>
+            <div class="wand">
+                <img id="wand-img" src="./assets/magic-wand.png" alt="">
+            </div>
         </div>
     </div>
+    
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+    <script src="./script/index.js"></script>
 </body>
 </html>
