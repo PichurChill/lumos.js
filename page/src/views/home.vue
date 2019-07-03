@@ -14,7 +14,7 @@
                 <img ref="wandImg" src="~@/assets/magic-wand.png" alt="">
             </div>
         </div>
-        <a class="download" href="https://github.com/PichurChill/lumos.js/blob/master/dist/lumos.min.js">
+        <a class="download" href="https://cdn.jsdelivr.net/npm/lumos.js">
             <strong>Lumos.min.js</strong>
             <p class="download-info">v{{version}}</p>
         </a>
@@ -58,7 +58,7 @@ export default {
 
   methods: {
     init () {
-      let t = new TimelineMax()
+      let t = new TimelineLite()
       // 标题出现
       t.to(this.$refs.title, 0, { className: "+=animated fadeInUp" })
       // // 开始挥魔杖
