@@ -1,0 +1,14 @@
+@import './vars.scss';
+
+html {
+    height: 100%;
+    font-size:625%;
+    font-family: "Open Sans", "Helvetica Neue",Helvetica,Arial,"Microsoft Yahei","Hiragino Sans GB","Heiti SC","WenQuanYi Micro Hei",sans-serif;
+}
+html, body, p {
+    margin: 0;
+    padding: 0;
+}
+* {
+    box-sizing: border-box;
+}
