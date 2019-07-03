@@ -11,6 +11,7 @@
 
 <body>
     <ul>
+        <li>version <span id="version"></span></li>
         <li>
             <a href="./cookie">cookie</a>
         </li>
@@ -43,5 +44,9 @@
         </li>
     </ul>
 </body>
+<%-include("./templates/pageFoot")%>
+<script>
+    document.querySelector("#version").innerHTML = lumos.version
+</script>
 
 </html>
