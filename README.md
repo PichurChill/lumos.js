@@ -6,7 +6,8 @@ unfinished
 
 
 #发布流程
-- 在 `master`分支 修改、改版本号， commit
+- 在 `dev`分支 修改、改版本号， commit
+- 切 `master`分支 merge `dev`，改版本号 push
 - 切 `npm`分支 merge 、push即可，travis 会触发 build 和 publish
 
 

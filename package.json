@@ -1,6 +1,6 @@
 {
   "name": "lumos.js",
-  "version": "0.0.7",
+  "version": "0.0.81",
   "description": "Front-End utils",
   "main": "dist/lumos.min.js",
   "scripts": {

@@ -9,5 +9,5 @@ r.keys().forEach(key => {
     let attr = key.substring(key.lastIndexOf('/') + 1, key.lastIndexOf('.'));
     moduleExports[attr] = r(key);
 });
-
+moduleExports['version'] = require('../package.json').version;
 module.exports = moduleExports;
