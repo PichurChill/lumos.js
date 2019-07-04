@@ -14,7 +14,7 @@
                 <img ref="wandImg" src="~@/assets/magic-wand.png" alt="">
             </div>
         </div>
-        <a class="download" href="https://cdn.jsdelivr.net/npm/lumos.js">
+        <a class="download" href="https://cdn.jsdelivr.net/npm/lumos.js/dist/lumos.min.js">
             <strong>Lumos.min.js</strong>
             <p class="download-info">v{{version}}</p>
         </a>
