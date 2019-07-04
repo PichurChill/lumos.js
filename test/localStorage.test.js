@@ -1,53 +1,54 @@
 describe('LocalStorage API:', function () {
+    // getLocalstorage
     describe('#getLocalstorage()', function () {
         before(function () {
-            lumos.setLocalStorage('test', 'value')
+            lumos.setLocalStorage('testKey', 'testValue')
         })
-        it(`lumos.getLocalStorage('test')`, function () {
-            expect(lumos.getLocalStorage('test')).to.be.equal('value')
+        it(`lumos.getLocalStorage('testKey')`, function () {
+            expect(lumos.getLocalStorage('testKey')).to.be.equal('testValue')
         })
-        it(`lumos.getLocalStorage('empty')`, function () {
-            expect(lumos.getLocalStorage('empty')).to.be.equal('')
+        it(`lumos.getLocalStorage('emptyKey')`, function () {
+            expect(lumos.getLocalStorage('emptyKey')).to.be.equal('')
         })
         after(function () {
-            lumos.removeLocalStorage('test')
+            lumos.removeLocalStorage('testKey')
         })
     })
 
     describe('#setLocalStorage()', function () {
-        it(`lumos.setLocalStorage('test', 'value')`, function () {
-            lumos.setLocalStorage('test', 'value') 
-            expect(lumos.getLocalStorage('test')).to.be.equal('value')
+        it(`lumos.setLocalStorage('testKey', 'testValue')`, function () {
+            lumos.setLocalStorage('testKey', 'testValue') 
+            expect(lumos.getLocalStorage('testKey')).to.be.equal('testValue')
         })
         after(function () {
-            lumos.removeLocalStorage('test')
+            lumos.removeLocalStorage('testKey')
         })
     })
 
     // 测试过期时间
     describe('#setLocalStorage() expire days', function () {
-        it(`lumos.setLocalStorage('test', 'value')`, function (done) {
-            lumos.setLocalStorage('test', 'value', 0.00001) // expire in 0.86s
+        it(`lumos.setLocalStorage('testKey', 'testValue')`, function (done) {
+            lumos.setLocalStorage('testKey', 'testValue', 0.00001) // expire in 0.86s
             setTimeout(() => {
-                expect(lumos.getLocalStorage('test')).to.be.equal('')
+                expect(lumos.getLocalStorage('testKey')).to.be.equal('')
                 done()
             }, 1000);
         })
         after(function () {
-            lumos.removeLocalStorage('test')
+            lumos.removeLocalStorage('testKey')
         })
     })
 
     describe('#removeLocalStorage()', function () {
         before(function () {
-            lumos.setLocalStorage('test', 'value')
+            lumos.setLocalStorage('testKey', 'testValue')
         })
-        it(`lumos.removeLocalStorage('test')`, function () {
-            lumos.removeLocalStorage('test')
-            expect(lumos.getLocalStorage('test')).to.not.equal('value')
+        it(`lumos.removeLocalStorage('testKey')`, function () {
+            lumos.removeLocalStorage('testKey')
+            expect(lumos.getLocalStorage('testKey')).to.not.equal('testValue')
         })
         after(function () {
-            lumos.removeLocalStorage('test')
+            lumos.removeLocalStorage('testKey')
         })
     })
 })

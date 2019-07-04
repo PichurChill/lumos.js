@@ -11,7 +11,7 @@ function getOS() {
     if (/iphone/i.test(userAgent) || /ipad/i.test(userAgent) || /ipod/i.test(userAgent)) return { name: 'ios' }
     if (/android/i.test(userAgent)) return { name: 'android'}
     if (/win/i.test(appVersion) && /phone/i.test(userAgent)) return { name: 'windowsPhone' }
-    if (/mac/i.test(appVersion)) return { name: 'MacOSX' }
+    if (/mac/i.test(appVersion)) return { name: 'macOSX' }
     if (/win/i.test(appVersion)) return { name: 'windows'}
     if (/linux/i.test(appVersion)) return { name: 'linux' }
 }
