@@ -57,7 +57,7 @@ lumos.getScrollTop(window)
 
 
 ## 文档
-comming soon...
+coming soon...
 
 [Document](https://pichurchill.github.io/lumos.js/#/document)
 
