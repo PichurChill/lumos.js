@@ -1,11 +1,13 @@
 # lumos.js
 前端工具类库 | JavaScript utility library
-https://pichurchill.github.io/lumos.js
 
 [![npm](https://img.shields.io/npm/v/lumos.js.svg?color=%231f7fbf)](https://www.npmjs.com/package/lumos.js)
 [![Travis (.com)](https://img.shields.io/travis/com/pichurchill/lumos.js.svg)](https://travis-ci.com/pichurchill/lumos.js)
 [![Coveralls github](https://img.shields.io/coveralls/github/PichurChill/lumos.js.svg)](https://coveralls.io/github/PichurChill/lumos.js)
 [![GitHub](https://img.shields.io/github/license/PichurChill/lumos.js.svg)](https://github.com/PichurChill/lumos.js/blob/master/LICENSE)
+
+https://pichurchill.github.io/lumos.js
+
 
 [![screenshot](http://blog.cdn.ifrena.com/lumos-screen-shot.png)](https://pichurchill.github.io/lumos.js)
 
