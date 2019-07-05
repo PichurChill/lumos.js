@@ -6,10 +6,9 @@
             <%= title %>
         </h1>
         <p id="test"></p>
-        <%-include("./templates/pageFoot")%>
         <h3>打开console查看</h3>
 
-        节流 throttle
+        节流  lumos.throttle(1000, scrollHandler1)
         <div id="dom1" style="height: 100px;width: 200px;border: 1px solid burlywood;overflow: auto">
             <h2>=</h2>
             <h2>=</h2>
@@ -18,7 +17,7 @@
             <h2>=</h2>
         </div>
 
-        防抖 debounce
+        节流 lumos.throttle(1000, true, scrollHandler2)
         <div id="dom2" style="height: 100px;width: 200px;border: 1px solid burlywood;overflow: auto">
             <h2>=</h2>
             <h2>=</h2>
@@ -26,22 +25,58 @@
             <h2>=</h2>
             <h2>=</h2>
         </div>
+
+        防抖 lumos.debounce(1000, scrollHandler3)
+        <div id="dom3" style="height: 100px;width: 200px;border: 1px solid burlywood;overflow: auto">
+            <h2>=</h2>
+            <h2>=</h2>
+            <h2>=</h2>
+            <h2>=</h2>
+            <h2>=</h2>
+        </div>
+
+        防抖 lumos.debounce(1000, true, scrollHandler4)
+        <div id="dom4" style="height: 100px;width: 200px;border: 1px solid burlywood;overflow: auto">
+            <h2>=</h2>
+            <h2>=</h2>
+            <h2>=</h2>
+            <h2>=</h2>
+            <h2>=</h2>
+        </div>
+        <%-include("./templates/pageFoot")%>
         <script>
             var scrollHandler1 = function () {
-                console.log('throttle');
+                console.log('throttle1');
             }
-            var fn = lumos.throttle(500, true, scrollHandler1)
+            var fn1 = lumos.throttle(1000, scrollHandler1)
 
-            document.querySelector("#dom1").addEventListener('scroll', fn) 
+            document.querySelector("#dom1").addEventListener('scroll', fn1) 
 
 
             var scrollHandler2 = function () {
-                console.log('debounce');
+                console.log('throttle2');
             }
-            var fn = lumos.debounce(500, scrollHandler2)
+            var fn2 = lumos.throttle(1000, true, scrollHandler2)
 
-            document.querySelector("#dom2").addEventListener('scroll', fn) 
+            document.querySelector("#dom2").addEventListener('scroll', fn2) 
 
+
+            
+            var scrollHandler3 = function () {
+                console.log('debounce1');
+            }
+            var fn3 = lumos.debounce(1000, scrollHandler3)
+
+            document.querySelector("#dom3").addEventListener('scroll', fn3) 
+
+
+
+            var scrollHandler4 = function () {
+                console.log('debounce2');
+            }
+            var fn4 = lumos.debounce(1000, true, scrollHandler4)
+
+            document.querySelector("#dom4").addEventListener('scroll', fn4) 
             
         </script>
     </body>

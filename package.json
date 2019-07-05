@@ -1,6 +1,10 @@
 {
   "name": "lumos.js",
+<<<<<<< HEAD
   "version": "0.0.81",
+=======
+  "version": "0.0.9",
+>>>>>>> dev
   "description": "Front-End utils",
   "main": "dist/lumos.min.js",
   "scripts": {
@@ -40,5 +44,7 @@
     "rimraf": "^2.6.2",
     "webpack": "^4.28.3"
   },
-  "dependencies": {}
+  "dependencies": {
+    "uglifyjs-webpack-plugin": "^2.1.3"
+  }
 }

@@ -4,12 +4,15 @@ const path = require('path')
 const pkg = require('../package.json')
 
 const rootPath = path.resolve(__dirname, '../')
-
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const config = {
     mode: 'production',
-    entry: path.resolve(rootPath, 'src', 'index.js'),
+    entry: {
+        'lumos': path.resolve(rootPath, 'src', 'index.js'),
+        'lumos.min': path.resolve(rootPath, 'src', 'index.js'),
+    },
     output: {
-        filename: 'lumos.min.js',
+        filename: '[name].js',
         path: path.resolve(rootPath, 'dist'),
         library: 'lumos', // pkg.name
         libraryTarget: "umd"
@@ -19,6 +22,12 @@ const config = {
             test: /\.js$/,
             loader: "babel-loader"
         }]
+    },
+    optimization: {
+        minimize: true,
+        minimizer: [new UglifyJsPlugin({
+            include: /\.min\.js$/
+        })]
     }
 }
 
