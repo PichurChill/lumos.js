@@ -2,7 +2,7 @@
     <div class="doc">
         <e-header></e-header>
         <div class="container">
-            Commig soon...
+            Coming soon...
         </div>
     </div>
 </template>
