@@ -25,9 +25,17 @@
           Named after the light-giving spell in <span>Harry Potter</span>
         </p>
         <div class="repo">
-          <img class="badge" style="margin-right: 10px" alt="npm" src="https://img.shields.io/npm/v/lumos.js.svg">
-          <img class="badge" style="margin-left: 10px" alt="GitHub stars" src="https://img.shields.io/github/stars/pichurchill/lumos.js.svg?style=social">
-          <router-link class="doc-link" style="margin-left: 10px" to="/document">Document</router-link>
+          <a class="doc-link" href="https://github.com/PichurChill/lumos.js">
+            GitHub
+          </a>  
+          <router-link class="doc-link" to="/document">Document</router-link>
+          <div class="des-line"></div>
+          <a class="badge" href="https://www.npmjs.com/package/lumos.js" target="_blank">
+            <img  alt="npm" src="https://img.shields.io/npm/v/lumos.js.svg">
+          </a>
+          <span class="badge">
+            <img  alt="GitHub stars" src="https://img.shields.io/github/stars/pichurchill/lumos.js.svg?style=social">
+          </span>
         </div>
     </div>
     <!-- <div class="footer">
@@ -195,12 +203,25 @@ export default {
           margin-top: .3rem;
           text-align: center;
           .badge {
-            vertical-align: top;
+            vertical-align: middle;
+            margin: 0 5px;
+            img {
+              vertical-align: middle;
+            }
           }
           height: 30px;
           overflow: hidden;
           .doc-link {
             font-size: .16rem;
+            vertical-align: middle;
+          }
+          .des-line {
+            display: inline-block;
+            margin: 0 .18rem;
+            height: .18rem;
+            width: .02rem;
+            vertical-align: middle;
+            background: #fff;
           }
         }
     }

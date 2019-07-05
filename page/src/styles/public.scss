@@ -20,3 +20,10 @@ html, body, p {
     visibility: hidden;
     clear: both;
 }
+
+.flex {
+    display: flex;
+}
+.flex-1 {
+    flex: 1
+}
