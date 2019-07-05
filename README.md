@@ -13,4 +13,6 @@ unfinished
 
 
 
-TODO：代码测试通过率 badge
+TODO：
+    - 代码测试通过率 badge
+    - gh-pages 完善 && 发布自动化
