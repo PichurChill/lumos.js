@@ -7,7 +7,7 @@ https://pichurchill.github.io/lumos.js
 ![Coveralls github](https://img.shields.io/coveralls/github/PichurChill/lumos.js.svg)
 ![GitHub](https://img.shields.io/github/license/PichurChill/lumos.js.svg)
 
-![screenshot](http://blog.cdn.ifrena.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202019-07-05%20%E4%B8%8B%E5%8D%8810.59.49.png)
+![screenshot](http://blog.cdn.ifrena.com/lumos-screen-shot.png)
 
 ### 目的
 -  `lumos` 来源：[哈利波特](https://harrypotter.fandom.com/wiki/Lumos_Maxima)
