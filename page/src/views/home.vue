@@ -214,10 +214,11 @@ export default {
           .doc-link {
             font-size: .16rem;
             vertical-align: middle;
+            margin: 0 3px;
           }
           .des-line {
             display: inline-block;
-            margin: 0 .18rem;
+            margin: 0 .15rem;
             height: .18rem;
             width: .02rem;
             vertical-align: middle;
