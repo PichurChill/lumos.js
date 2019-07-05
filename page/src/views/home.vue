@@ -2,7 +2,7 @@
   <div class="home">
    
     <div class="body">
-        <div class="top-right" @click="handleDoc">Doc</div>
+        <!-- <div class="top-right" @click="handleDoc">Doc</div> -->
         <p class="title" ref="title">
             Lumos
         </p>
@@ -25,8 +25,9 @@
           Named after the light-giving spell in <span>Harry Potter</span>
         </p>
         <div class="repo">
-          <img style="margin-right: 10px" alt="npm" src="https://img.shields.io/npm/v/lumos.js.svg">
-          <img style="margin-left: 10px" alt="GitHub stars" src="https://img.shields.io/github/stars/pichurchill/lumos.js.svg?style=social">
+          <img class="badge" style="margin-right: 10px" alt="npm" src="https://img.shields.io/npm/v/lumos.js.svg">
+          <img class="badge" style="margin-left: 10px" alt="GitHub stars" src="https://img.shields.io/github/stars/pichurchill/lumos.js.svg?style=social">
+          <router-link class="doc-link" style="margin-left: 10px" to="/document">Document</router-link>
         </div>
     </div>
     <!-- <div class="footer">
@@ -68,7 +69,9 @@ export default {
       t.to(this.$refs.title, 3, { className: "+=super-shadow glitch__title" }, "1.7")
     },
     handleDoc () {
-      alert('coming soon...')
+      this.$router.push({
+        name: 'docIndex'
+      })
     }
   }
 }
@@ -83,17 +86,24 @@ export default {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    font-size: .14rem;
+    a {
+      text-decoration: none;
+      color: #fff;
+      outline: none;
+    }
     .body {
          flex: 1 0 auto;
          position: relative;
-        .top-right {
-          color: #9e9e9e;
-          font-size: .14rem;
-          font-weight: bolder;
-          position: absolute;
-          right: .1rem;
-          top: .07rem;
-        }
+        // .top-right {
+        //   z-index: 2019;
+        //   color: #9e9e9e;
+        //   font-size: .14rem;
+        //   font-weight: bolder;
+        //   position: absolute;
+        //   right: .1rem;
+        //   top: .07rem;
+        // }
         .title {
             clear: both;
             text-align: center;
@@ -181,11 +191,14 @@ export default {
         .repo {
           margin-top: .3rem;
           text-align: center;
-          img {
+          .badge {
             vertical-align: top;
           }
           height: 30px;
           overflow: hidden;
+          .doc-link {
+            font-size: .16rem;
+          }
         }
     }
     .footer {

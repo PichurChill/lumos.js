@@ -12,3 +12,11 @@ html, body, p {
 * {
     box-sizing: border-box;
 }
+.e-clearfix:after {
+    display: block;
+    content: ' ';
+    height: 0;
+    font-size: 0;
+    visibility: hidden;
+    clear: both;
+}

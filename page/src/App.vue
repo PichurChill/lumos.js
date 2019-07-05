@@ -16,5 +16,6 @@ export default {
  @import '~@/styles/public.scss';
  #app {
    height: 100vh;
+   font-size: .14rem;
  }
 </style>
