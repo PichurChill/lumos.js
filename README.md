@@ -6,7 +6,11 @@ https://pichurchill.github.io/lumos.js
 ![Travis (.com)](https://img.shields.io/travis/com/pichurchill/lumos.js.svg)
 ![Coveralls github](https://img.shields.io/coveralls/github/PichurChill/lumos.js.svg)
 ![GitHub](https://img.shields.io/github/license/PichurChill/lumos.js.svg)
+
+![screenshot](http://blog.cdn.ifrena.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202019-07-05%20%E4%B8%8B%E5%8D%8810.59.49.png)
+
 ### 目的
+-  `lumos` 来源：[哈利波特](https://harrypotter.fandom.com/wiki/Lumos_Maxima)
 - 一直想较完整地做一个较“现代化构建”的项目学习下，顺便整理一下一些常用的前端工具类
 - 参考并学习： [👍👍👍proYang/outils](https://github.com/proYang/outils)
 
