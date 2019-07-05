@@ -14,8 +14,8 @@ const pkName = 'lumos.min.js'
 // 构建全量压缩包
 let building = ora('building...')
 building.start()
-rm(path.resolve(rootPath, 'dist', pkName), err => {
-  if (err) throw (err)
+// rm(path.resolve(rootPath, 'dist', pkName), err => {
+//   if (err) throw (err)
   webpack(config, function (err, stats) {
     if (err) throw (err)
     building.stop()
@@ -29,4 +29,4 @@ rm(path.resolve(rootPath, 'dist', pkName), err => {
     fs.writeFileSync(`demo/public/${pkName}`, fs.readFileSync(`dist/${pkName}`));
     console.log(chalk.cyan('  Build complete.\n'))
   })
-})
+// })
