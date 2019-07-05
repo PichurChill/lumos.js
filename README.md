@@ -1,18 +1,21 @@
-参考并学习： [👍proYang/outils](https://github.com/proYang/outils)
+# lumos.js
+前端工具类库 | JavaScript utility library
+https://pichurchill.github.io/lumos.js
 
-还未完成 占个坑 ^_^
+![npm](https://img.shields.io/npm/v/lumos.js.svg)
+![Travis (.com)](https://img.shields.io/travis/com/pichurchill/lumos.js.svg)
+![Coveralls github](https://img.shields.io/coveralls/github/PichurChill/lumos.js.svg)
+![GitHub](https://img.shields.io/github/license/PichurChill/lumos.js.svg)
+### 目的
+- 一直想较完整地做一个较“现代化构建”的项目学习下，顺便整理一下一些常用的前端工具类
+- 参考并学习： [👍👍👍proYang/outils](https://github.com/proYang/outils)
 
-unfinished
+### 实现
+- `travis-ci` 配合 `github` 来做持续化构建，实现自动发布到 `npm` 等功能
+- 使用 `karma`、`mocha`、`chai` 做单元测试，`coverage` 测试覆盖率
 
+### 文档
+comming soon...
 
-#发布流程
-- 在 `dev`分支 修改、改版本号， commit
-- 切 `master`分支 merge `dev`，改版本号 push
-- 切 `npm`分支 merge 、push即可，travis 会触发 build 和 publish
+[Document](https://pichurchill.github.io/lumos.js/#/document)
 
-
-
-
-TODO：
-    - 代码测试通过率 badge
-    - gh-pages 完善 && 发布自动化
