@@ -13,4 +13,4 @@ unfinished
 
 
 
-TODO：代码测试通过率、切分支发布npm
+TODO：建议文档、协议说明
