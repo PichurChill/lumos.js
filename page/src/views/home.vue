@@ -66,7 +66,7 @@ export default {
       // 标题出现
       t.to(this.$refs.title, 0, { className: "+=animated fadeInUp" })
       // // 开始挥魔杖
-      t.to(this.$refs.Url = 'http://blog.cdn.ifrena.com/magic-wand.png', 0, { className: "+=animated wobble" }, "0.8")
+      t.to(this.$refs.wandImg, 0, { className: "+=animated wobble" }, "0.8")
       // // 挥魔杖结束 咒语生效、开始闪烁、字体发光
       t.to(this.$refs.lightSpot, 0, { className: "+=light-spot-animate" }, "1.7")
       t.to(this.$refs.title, 3, { className: "+=super-shadow glitch__title" }, "1.7")
