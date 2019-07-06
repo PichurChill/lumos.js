@@ -81,7 +81,6 @@ coming soon...
 ├── function
 │   ├── debounce.js
 │   └── throttle.js
-├── index.js
 ├── localStorage
 │   ├── getLocalStorage.js
 │   ├── removeLocalStorage.js
