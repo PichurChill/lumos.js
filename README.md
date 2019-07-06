@@ -61,3 +61,36 @@ coming soon...
 
 [Document](https://pichurchill.github.io/lumos.js/#/document)
 
+```
+├── cookie
+│   ├── getCookie.js
+│   ├── removeCookie.js
+│   └── setCookie.js
+├── data
+│   └── isEmpty.js
+├── date
+│   └── dateFormat.js
+├── device
+│   ├── getBrowser.js
+│   └── getOS.js
+├── dom
+│   ├── getEleFullHeight.js
+│   ├── getScrollTop.js
+│   ├── scrollTo.js
+│   └── setScrollTop.js
+├── function
+│   ├── debounce.js
+│   └── throttle.js
+├── index.js
+├── localStorage
+│   ├── getLocalStorage.js
+│   ├── removeLocalStorage.js
+│   └── setLocalStorage.js
+├── object
+│   └── deepClone.js
+├── string
+│   └── strReplace.js
+└── url
+    ├── parseQueryString.js
+    └── stringfyQueryString.js
+```
