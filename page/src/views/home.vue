@@ -179,7 +179,7 @@ export default {
           height: .55rem;
           line-height: .55rem;
           color: #333;
-          background: #e8ae59;
+          // background: #e8ae59;
           // font-weight: bold;
           text-align: center;
           padding: 0 .1rem;
@@ -191,12 +191,12 @@ export default {
             width: .32rem;
             font-size: .13rem;
             vertical-align: middle;
-            fill: #5a4f4f;
+            fill: #fff;
           }
           &-text {
             vertical-align: middle;
-            margin-left: .12rem;
-            color: #5a4f4f;
+            margin-left: .14rem;
+            color: #fff;
             font-size: .16rem;
           }
         }
@@ -204,7 +204,7 @@ export default {
             color: #fff;
             font-size: .19rem;
             text-align: center;
-            margin-top: .35rem;
+            margin-top: .2rem;
         }
         .sub-title__desc {
           color: #a7a7a7;
