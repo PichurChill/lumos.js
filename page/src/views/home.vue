@@ -172,7 +172,7 @@ export default {
           width: 1.8rem;
           height: .7rem;
           color: #333;
-          background: #FF9800;
+          background: #ff6723;
           // font-weight: bold;
           text-align: center;
           padding: .1rem;
