@@ -11,14 +11,15 @@ https://pichurchill.github.io/lumos.js
 
 [![screenshot](http://blog.cdn.ifrena.com/lumos-screen-shot.png)](https://pichurchill.github.io/lumos.js)
 
-## 目的
--  🧙‍ `lumos` 来源：[Lumos](https://harrypotter.fandom.com/wiki/Lumos_Maxima)
-- 💻 想较完整地做一个较“现代化构建”的项目学习下，顺便整理一下一些常用的前端工具类
+## 介绍
+- 🧙‍ 名字来源：[Lumos](https://harrypotter.fandom.com/wiki/Lumos_Maxima)
+- 🦉 想较完整地做一个较“现代化构建”的项目学习下，顺便整理一下一些常用的前端工具类
 - 👍 参考并学习： [proYang/outils](https://github.com/proYang/outils)
 
 ## 实现
-- `travis-ci` 配合 `github` 来做持续化构建，实现自动发布到 `npm` 等功能
-- 使用 `karma`、`mocha`、`chai` 做单元测试，`coverage` 测试覆盖率
+- 💡 `Lumos` 的动画效果
+- ⚙️ `travis-ci` 配合 `github` 来做持续化构建，实现自动发布到 `npm` 等功能
+- 🔧 使用 `karma`、`mocha`、`chai` 做单元测试，`coverage` 测试覆盖率
 
 ## 安装
 ### 浏览器
@@ -61,3 +62,35 @@ coming soon...
 
 [Document](https://pichurchill.github.io/lumos.js/#/document)
 
+```
+├── cookie
+│   ├── getCookie.js
+│   ├── removeCookie.js
+│   └── setCookie.js
+├── data
+│   └── isEmpty.js
+├── date
+│   └── dateFormat.js
+├── device
+│   ├── getBrowser.js
+│   └── getOS.js
+├── dom
+│   ├── getEleFullHeight.js
+│   ├── getScrollTop.js
+│   ├── scrollTo.js
+│   └── setScrollTop.js
+├── function
+│   ├── debounce.js
+│   └── throttle.js
+├── localStorage
+│   ├── getLocalStorage.js
+│   ├── removeLocalStorage.js
+│   └── setLocalStorage.js
+├── object
+│   └── deepClone.js
+├── string
+│   └── strReplace.js
+└── url
+    ├── parseQueryString.js
+    └── stringfyQueryString.js
+```
