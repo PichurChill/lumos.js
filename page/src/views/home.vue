@@ -14,9 +14,13 @@
                 <img ref="wandImg" :src="wandImgUrl" alt="">
             </div>
         </div>
-        <a class="download" href="https://cdn.jsdelivr.net/npm/lumos.js/dist/lumos.min.js">
-            <strong>Lumos.min.js</strong>
-            <p class="download-info">v{{version}}</p>
+        <!-- https://cdn.jsdelivr.net/npm/lumos.js/dist/lumos.min.js -->
+        <a class="github" href="https://github.com/PichurChill/lumos.js">
+          <!-- <embed :src="githubIcon" type="image/svg+xml"> -->
+          <github-icon class="github-icon"/>
+          <span class="github-text">GITHUB</span>
+            <!-- <strong>Lumos.min.js</strong>
+            <p class="download-info">v{{version}}</p> -->
         </a>
         <p class="sub-title">
             A simple modern JavaScript utility library
@@ -25,9 +29,7 @@
           Named after the light-giving spell in <span>Harry Potter</span>
         </p>
         <div class="repo">
-          <a class="doc-link" href="https://github.com/PichurChill/lumos.js">
-            GitHub
-          </a>  
+
           <router-link class="doc-link" to="/document">Document</router-link>
           <div class="des-line"></div>
           <a class="badge" href="https://www.npmjs.com/package/lumos.js" target="_blank">
@@ -53,15 +55,19 @@
 <script>
 import { TimelineLite } from "gsap/TweenMax";
 import lumos from 'lumos.js'
+import githubIcon from '@/assets/icon/github.svg'
 
 const wandImgUrl = 'http://blog.cdn.ifrena.com/magic-wand.png'
 
 export default {
   name: 'home',
+  components: {
+    githubIcon
+  },
   data () {
     return {
       version: lumos.version,
-      wandImgUrl,
+      wandImgUrl
     }
   },
   mounted () {
@@ -166,29 +172,39 @@ export default {
             opacity: 1;
             animation: start-shine 4s forwards, shining 5s  4s infinite;
         }
-        .download {
+        .github {
           display: block;
           font-size: .2rem;
-          width: 1.8rem;
-          height: .7rem;
+          width: 1.5rem;
+          height: .55rem;
+          line-height: .55rem;
           color: #333;
-          background: #ff6723;
+          background: #e8ae59;
           // font-weight: bold;
           text-align: center;
-          padding: .1rem;
-          padding-top: .15rem;
+          padding: 0 .1rem;
           margin: 0 auto;
           text-decoration: none;
           margin-top: 0.4rem;
-          &-info {
+          border-radius: 2px;
+          &-icon {
+            width: .32rem;
             font-size: .13rem;
+            vertical-align: middle;
+            fill: #5a4f4f;
+          }
+          &-text {
+            vertical-align: middle;
+            margin-left: .12rem;
+            color: #5a4f4f;
+            font-size: .16rem;
           }
         }
         .sub-title {
             color: #fff;
             font-size: .19rem;
             text-align: center;
-            margin-top: .5rem;
+            margin-top: .35rem;
         }
         .sub-title__desc {
           color: #a7a7a7;
