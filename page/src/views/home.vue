@@ -35,9 +35,9 @@
           <a class="badge" href="https://www.npmjs.com/package/lumos.js" target="_blank">
             <img  alt="npm" src="https://img.shields.io/npm/v/lumos.js.svg">
           </a>
-          <span class="badge">
+          <a class="badge" href="https://github.com/PichurChill/lumos.js" target="_blank">
             <img  alt="GitHub stars" src="https://img.shields.io/github/stars/pichurchill/lumos.js.svg?style=social">
-          </span>
+          </a>
         </div>
     </div>
     <!-- <div class="footer">

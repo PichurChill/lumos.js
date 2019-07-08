@@ -12,7 +12,7 @@ rm.sync(path.resolve(rootPath, 'index.html'))
 
 
 fileFn.copyDir(path.resolve(rootPath, 'page/dist'), rootPath)
-fileFn.rmdir(path.resolve(rootPath, 'page/dist'))
+rm(path.resolve(rootPath, 'page/dist'), () => {})
 
 
 
