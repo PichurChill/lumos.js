@@ -36,9 +36,15 @@ function scrollTo(el, start, end, duration) {
     if (start > end) {
         d = (start - step < end) ? end : start - step;
     }
-    if (end === getScrollTop(el)) {
+    let elScrollTop = getScrollTop(el)
+    if (end === elScrollTop) {
         return
     }
+    if (Math.abs(elScrollTop - end) > 0 && step < 0) {
+        setScrollTop(el, end)
+        return
+    }
+
     setScrollTop(el, d)
     requestAnimFrame(() => scrollTo(el, d, end, duration - 16));
 }
