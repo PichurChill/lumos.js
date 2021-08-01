@@ -11,7 +11,7 @@
         
             </div>
             <div class="wand">
-                <img ref="wandImg" :src="wandImgUrl" alt="">
+                <img ref="wandImg" :src="'./img/magic-wand.png'" alt="">
             </div>
         </div>
         <!-- https://cdn.jsdelivr.net/npm/lumos.js/dist/lumos.min.js -->
